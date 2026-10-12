@@ -1,28 +1,25 @@
-import Counter from "./Counter.jsx";
-import LikeButton from "./LikeButton.jsx";
-import SubjectList from "./SubjectList.jsx";
-
-const subjects = [
-  { code: "BICS 3301", name: "Cross-Platform Software Development" },
-  { code: "BICS 2305", name: "Operating Systems" },
-  { code: "BICS 2306", name: "Software Engineering" },
-];
+import Header from "./components/Header.jsx";
+import VendorCard from "./components/VendorCard.jsx";
+import MenuItemCard from "./components/MenuItemCard.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
     <>
-      <h1>Week 2 code-along</h1>
-      <br />
-      <Counter />
-      <div className="box">
-        <LikeButton label="React" />
-        <br />
-        <LikeButton label="Firebase" />
-        <br />
-        <LikeButton label="PWA" />
-        <LikeButton label="ALI" />
-      </div>
-      <SubjectList subjects={subjects} />
+      <Header />
+      <main className="container">
+        <section>
+          <h2 className="section-title">Today's vendors</h2>
+          <VendorCard />
+        </section>
+        <section>
+          <h2 className="section-title">Popular items</h2>
+          <div className="grid">
+            <MenuItemCard />
+          </div>
+        </section>
+      </main>
+      <Footer />
     </>
   );
 }
