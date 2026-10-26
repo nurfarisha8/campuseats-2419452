@@ -1,0 +1,182 @@
+[
+  {
+    "id": "2419452-Nurfarisha-cafe",
+    "name": "Nurfarisha Cafe",
+    "location": "Mahallah Hafsah, Ground Floor",
+    "openHours": "7:00 am - 10:00 pm",
+    "isOpen": true,
+    "menu": [
+      {
+        "id": "2419452-m1",
+        "name": "Nasi Lemak Ayam Goreng",
+        "description": "Fried chicken with sambal and rice",
+        "price": 5.5,
+        "category": "Rice",
+        "available": true,
+        "popularity": 95
+      },
+      {
+        "id": "2419452-m2",
+        "name": "Fried Rice",
+        "description": "Fried rice with vegetables",
+        "price": 6.5,
+        "category": "Rice",
+        "available": true,
+        "popularity": 85
+      },
+      {
+        "id": "2419452-m3",
+        "name": "Chicken Burger",
+        "description": "Juicy chicken burger with lettuce and tomato",
+        "price": 4.5,
+        "category": "Burgers",
+        "available": false,
+        "popularity": 75
+      },
+      {
+        "id": "2419452-m4",
+        "name": "French Fries",
+        "description": "Crispy fried potatoes",
+        "price": 4.0,
+        "category": "Snacks",
+        "available": true,
+        "popularity": 80
+      },
+      {
+        "id": "2419452-m5",
+        "name": "Chicken Nuggets",
+        "description": "Crispy chicken pieces",
+        "price": 2.0,
+        "category": "Snacks",
+        "available": false,
+        "popularity": 60
+      },
+      {
+        "id": "2419452-m6",
+        "name": "Teh tarik",
+        "description": "Sweetened tea with milk",
+        "price": 2.5,
+        "category": "Drinks",
+        "available": true,
+        "popularity": 70
+      },
+      {
+        "id": "2419452-m7",
+        "name": "Iced Neslo",
+        "description": "Iced milo and coffee with milk",
+        "price": 3.5,
+        "category": "Drinks",
+        "available": true,
+        "popularity": 85
+      },
+      {
+        "id": "2419452-m8",
+        "name": "Choccolate Cake",
+        "description": "Rich chocolate cake",
+        "price": 4.5,
+        "category": "Desserts",
+        "available": false,
+        "popularity": 65
+      }
+    ]
+  },
+  {
+    "id": "kafe-aminah",
+    "name": "Kafe Mahallah Aminah",
+    "location": "Mahallah Aminah, Ground Floor",
+    "openHours": "8:00 am - 9:00 pm",
+    "isOpen": false,
+    "menu": [
+      {
+        "id": "ami-1",
+        "name": "Nasi Ayam Penyet",
+        "description": "Smashed fried chicken with sambal and rice",
+        "price": 9,
+        "category": "Rice",
+        "available": true,
+        "popularity": 90
+      },
+      {
+        "id": "ami-2",
+        "name": "Air Bandung",
+        "description": "Rose syrup with milk",
+        "price": 3,
+        "category": "Drinks",
+        "available": true,
+        "popularity": 85
+      }
+    ]
+  },
+  {
+    "id": "kopiKAW",
+    "name": "Kopi KAW",
+    "location": "Mahallah Faruq, Ground Floor",
+    "openHours": "8:00 am - 9:00 pm",
+    "isOpen": true,
+    "menu": [
+      {
+        "id": "kopi-1",
+        "name": "Kopi O",
+        "description": "Black coffee",
+        "price": 2.0,
+        "category": "Drinks",
+        "available": true,
+        "popularity": 85
+      },
+      {
+        "id": "kopi-2",
+        "name": "Cuppoccino",
+        "description": "Espresso with steamed milk and foam",
+        "price": 4.5,
+        "category": "Drinks",
+        "available": true,
+        "popularity": 80
+      },
+      {
+        "id": "kopi-3",
+        "name": "Caramel Macchiato",
+        "description": "Espresso with caramel syrup and steamed milk",
+        "price": 6.5,
+        "category": "Drinks",
+        "available": true,
+        "popularity": 75
+      }
+    ]
+  },
+  {
+    "id": "snack-king",
+    "name": "Snack King",
+    "location": "Mahallah Asiah, Ground Floor",
+    "openHours": "10:00 am - 10:00 pm",
+    "isOpen": true,
+    "menu": [
+      {
+        "id": "snack-1",
+        "name": "Wedges",
+        "description": "Crispy potato wedges",
+        "price": 4.5,
+        "category": "Snacks",
+        "available": true,
+        "popularity": 80
+      },
+      {
+        "id": "snack-2",
+        "name": "Sausage Roll",
+        "description": "Grilled sausage wrapped in a soft bun",
+        "price": 3.5,
+        "category": "Snacks",
+        "available": true,
+        "popularity": 75
+      },
+      {
+        "id": "snack-3",
+        "name": "Waffle Chocolate",
+        "description": "Chocolate waffle with whipped cream",
+        "price": 5.5,
+        "category": "Desserts",
+        "available": true,
+        "popularity": 85
+      }
+    ]
+  }
+]

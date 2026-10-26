@@ -60,7 +60,7 @@ body {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1.5rem;
 }
@@ -84,11 +84,33 @@ body {
 .card h3 {
   margin: 0 0 0.25rem;
 }
+
 .vendor-card {
   display: flex;
-  gap: 1rem;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+  min-width: 0;
+  height: 100%;
+  padding: 1.25rem;
 }
+
+.vendor-card h2,
+.vendor-card h3 {
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.vendor-card p {
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.vendor-card .btn {
+  width: 100%;
+  margin-top: auto;
+}
+
 .thumb {
   width: 64px;
   height: 64px;
@@ -150,11 +172,14 @@ body {
 }
 
 /* Week 2 additions */
+
 .vendor-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
 }
+
 button.card {
   font: inherit;
   color: inherit;
@@ -167,7 +192,7 @@ button.card:hover {
   border-color: var(--green-light);
 }
 .vendor-card.selected {
-  border-color: var(--green);
+  border: 2px solid var(--green);
 }
 .card h3 {
   font-size: 1.05rem;
@@ -447,4 +472,368 @@ a.card:hover {
   .container {
     padding: 1rem;
   }
+
+  /* Week 3 layout improvements */
+
+  .cart-layout > .card {
+    min-width: 0;
+    padding: 1.5rem;
+  }
+
+  .cart-line {
+    grid-template-columns: minmax(0, 1fr) auto auto auto;
+    gap: 0.75rem;
+  }
+
+  .cart-line > * {
+    min-width: 0;
+  }
+
+  .cart-name {
+    overflow-wrap: anywhere;
+  }
+
+  .form {
+    min-width: 0;
+    padding: 1.5rem;
+  }
+
+  .form input,
+  .form select {
+    width: 100%;
+    min-height: 42px;
+  }
+
+  .form .btn {
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 520px) {
+    .cart-line {
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 0.5rem;
+    }
+
+    .line-total {
+      grid-column: 1;
+    }
+
+    .cart-line .link.danger {
+      grid-column: 2;
+      grid-row: 2;
+    }
+  }
+}
+/* =========================================
+   CampusEats layout improvements
+   ========================================= */
+
+:root {
+  --green: #00685e;
+  --green-light: #e6f2f0;
+  --text: #193936;
+  --muted: #64748b;
+  --bg: #f5f5f1;
+}
+
+/* Main page */
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+
+.header {
+  min-height: 60px;
+  padding: 0.8rem 1.5rem;
+  background: var(--green);
+  color: white;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav .link {
+  color: white;
+  font-size: 0.95rem;
+}
+
+.nav .link:hover {
+  opacity: 0.8;
+}
+
+/* Section headings */
+
+.container h2 {
+  font-size: 1.15rem;
+  margin: 1.5rem 0 0.85rem;
+  color: var(--text);
+}
+
+/* Vendor cards */
+
+.vendor-grid {
+  display: grid;
+  grid-template-columns: repeat(autofit, minmax(240px, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+button.vendor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  min-width: 0;
+  padding: 1rem;
+  min-height: 220px;
+  text-align: left;
+  font: inherit;
+  color: var(--text);
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+button.vendor-card:hover {
+  border-color: #9bc9c2;
+}
+
+button.vendor-card.selected {
+  border: 2px solid var(--green);
+  box-shadow: 0 1px 4px rgba(0, 104, 94, 0.12);
+}
+
+.vendor-thumb {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 9px;
+  background: var(--green-light);
+  color: var(--green);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.vendor-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.vendor-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.vendor-info .muted {
+  font-size: 0.78rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+/* Open and closed badges */
+
+.status {
+  display: inline-block;
+  margin-top: 0.2rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.status.open {
+  background: #e3f7e8;
+  color: #237a42;
+}
+
+.status.closed {
+  background: #fdecea;
+  color: #b3261e;
+}
+
+/* Menu section */
+
+.menu-section {
+  margin-top: 2rem;
+}
+
+.menu-section h2 {
+  margin-top: 0.5rem;
+}
+
+.menu-section > label {
+  display: inline-block;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.menu-section > select {
+  padding: 0.5rem 0.7rem;
+  border: 1px solid #d5dedc;
+  border-radius: 7px;
+  background: white;
+  font: inherit;
+}
+
+/* Menu grid */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Individual menu cards */
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+  padding: 0.85rem;
+  background: white;
+  border: 1px solid #edf0ef;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.menu-card .btn {
+  margin-top: auto;
+}
+
+.menu-card .thumb {
+  width: 46px;
+  height: 46px;
+  margin-bottom: 0.5rem;
+  border-radius: 9px;
+  font-size: 1.25rem;
+}
+
+.menu-card .tag {
+  align-self: flex-start;
+  margin-bottom: 0.25rem;
+}
+
+.menu-card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.menu-card .muted {
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.menu-card .price {
+  margin: 0.45rem 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.menu-card .btn {
+  margin-top: auto;
+  padding: 0.55rem;
+  border-radius: 7px;
+  font-size: 0.82rem;
+}
+
+.menu-card .btn:disabled {
+  background: #c5cbd3;
+}
+
+/* Footer */
+
+.footer {
+  padding: 1.5rem 1rem;
+  font-size: 0.8rem;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .vendor-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 560px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .header {
+    padding: 0.8rem 1rem;
+  }
+
+  .nav {
+    gap: 0.8rem;
+  }
+
+  .vendor-grid,
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  button.vendor-card {
+    padding: 0.9rem;
+  }
+
+  .menu-card {
+    padding: 1rem;
+  }
+}
+.app-shell {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
