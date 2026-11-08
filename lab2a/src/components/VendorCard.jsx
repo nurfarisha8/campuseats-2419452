@@ -1,22 +1,20 @@
-function VendorCard({ vendor, isSelected, onSelect }) {
+function VendorCard({ vendor }) {
   return (
-    <button
-      type="button"
-      className={`card vendor-card ${isSelected ? "selected" : ""}`}
-      onClick={onSelect}
-    >
-      <div className="thumb">{vendor.name.charAt(0)}</div>
+    <article className="card vendor-card">
+      <div className="vendor-thumb">{vendor.name.charAt(0)}</div>
 
-      <h3>{vendor.name}</h3>
+      <div className="vendor-info">
+        <p className="vendor-name">{vendor.name}</p>
 
-      <p className="muted">{vendor.location}</p>
+        <p className="muted">{vendor.location}</p>
 
-      <p className="muted">Open: {vendor.openHours}</p>
+        <p className="muted">{vendor.openHours}</p>
 
-      <span className={`status ${vendor.isOpen ? "open" : "closed"}`}>
-        {vendor.isOpen ? "Open now" : "Closed"}
-      </span>
-    </button>
+        <span className={`status ${vendor.isOpen ? "open" : "closed"}`}>
+          {vendor.isOpen ? "Open now" : "Closed"}
+        </span>
+      </div>
+    </article>
   );
 }
 

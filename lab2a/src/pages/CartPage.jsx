@@ -1,7 +1,17 @@
-import CartItem from "./CartItem.jsx";
-import CheckoutForm from "./CheckoutForm.jsx";
+import { useCart } from "../hooks/useCart";
+import CartItem from "../components/CartItem.jsx";
+import CheckoutForm from "../components/CheckoutForm.jsx";
+import { useNavigate } from "react-router";
 
-function CartPage({ cart, onChangeQty, onRemove, onPlaceOrder }) {
+function CartPage() {
+  const { cart, changeQty, removeFromCart, placeOrder } = useCart();
+
+  const navigate = useNavigate();
+  function handlePlaceOrder(details) {
+    placeOrder(details);
+    navigate("/orders");
+  }
+
   if (cart.length === 0) {
     return (
       <section className="card">
@@ -13,7 +23,6 @@ function CartPage({ cart, onChangeQty, onRemove, onPlaceOrder }) {
     );
   }
 
-  // Calculate the total from the current cart.
   const total = cart.reduce((sum, line) => sum + line.item.price * line.qty, 0);
 
   return (
@@ -27,8 +36,8 @@ function CartPage({ cart, onChangeQty, onRemove, onPlaceOrder }) {
               <CartItem
                 key={line.item.id}
                 line={line}
-                onChangeQty={onChangeQty}
-                onRemove={onRemove}
+                onChangeQty={changeQty}
+                onRemove={removeFromCart}
               />
             ))}
           </ul>
@@ -36,7 +45,7 @@ function CartPage({ cart, onChangeQty, onRemove, onPlaceOrder }) {
           <p className="cart-total">Total: RM {total.toFixed(2)}</p>
         </div>
 
-        <CheckoutForm onPlaceOrder={onPlaceOrder} />
+        <CheckoutForm onPlaceOrder={handlePlaceOrder} />
       </div>
     </section>
   );

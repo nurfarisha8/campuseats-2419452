@@ -108,14 +108,14 @@
     ]
   },
   {
-    "id": "kopiKAW",
-    "name": "Kopi KAW",
+    "id": "2418986-ika-kopiKAW",
+    "name": "Ika KopiKAW",
     "location": "Mahallah Faruq, Ground Floor",
     "openHours": "8:00 am - 9:00 pm",
     "isOpen": true,
     "menu": [
       {
-        "id": "kopi-1",
+        "id": "2418986-m1",
         "name": "Kopi O",
         "description": "Black coffee",
         "price": 2.0,
@@ -124,7 +124,7 @@
         "popularity": 85
       },
       {
-        "id": "kopi-2",
+        "id": "2418986-m2",
         "name": "Cuppoccino",
         "description": "Espresso with steamed milk and foam",
         "price": 4.5,
@@ -133,7 +133,7 @@
         "popularity": 80
       },
       {
-        "id": "kopi-3",
+        "id": "2418986-m3",
         "name": "Caramel Macchiato",
         "description": "Espresso with caramel syrup and steamed milk",
         "price": 6.5,
@@ -144,7 +144,7 @@
     ]
   },
   {
-    "id": "snack-king",
+    "id": "snackKing",
     "name": "Snack King",
     "location": "Mahallah Asiah, Ground Floor",
     "openHours": "10:00 am - 10:00 pm",
@@ -176,6 +176,123 @@
         "category": "Desserts",
         "available": true,
         "popularity": 85
+      }
+    ]
+  },
+  {
+    "id": "2419452-stationery Heaven",
+    "name": "IIUM Stationery Heaven",
+    "location": "Mahallah Ali, Ground Floor",
+    "openHours": "8:00 am - 10:00 pm",
+    "isOpen": true,
+    "menu": [
+      {
+        "id": "2419452-s1",
+        "name": "A4 Notebook",
+        "description": "80-page ruled notebook",
+        "price": 4.5,
+        "category": "Books",
+        "available": true,
+        "popularity": 90
+      },
+      {
+        "id": "2419452-s2",
+        "name": "Graph Notebook",
+        "description": "Graph paper notebook for calculations",
+        "price": 5.0,
+        "category": "Books",
+        "available": true,
+        "popularity": 85
+      },
+      {
+        "id": "2419452-s3",
+        "name": "Blue Ball Pen",
+        "description": "Smooth-writing ball pen",
+        "price": 1.5,
+        "category": "Writing Tools",
+        "available": true,
+        "popularity": 80
+      },
+      {
+        "id": "2419452-s4",
+        "name": "Highlighter Set",
+        "description": "Pack of 4 colours",
+        "price": 8.9,
+        "category": "Writing Tools",
+        "available": true,
+        "popularity": 75
+      },
+      {
+        "id": "2419452-s5",
+        "name": "Stapler",
+        "description": "Medium-size office stapler",
+        "price": 7.5,
+        "category": "Office Supplies",
+        "available": true,
+        "popularity": 70
+      },
+      {
+        "id": "2419452-s6",
+        "name": "Staple Refill",
+        "description": "1000 staples pack",
+        "price": 2.5,
+        "category": "Office Supplies",
+        "available": true,
+        "popularity": 65
+      }
+    ]
+  },
+  {
+    "id": "2419452-fashion",
+    "name": "Campus Fashion",
+    "location": "Mahallah Maryam, Ground Floor",
+    "openHours": "10:00 am - 11:00 pm",
+    "isOpen": true,
+    "menu": [
+      {
+        "id": "2419452-f1",
+        "name": "IIUM T-Shirt",
+        "description": "Cotton T-shirt with IIUM design",
+        "price": 25.0,
+        "category": "Clothing",
+        "popularity": 90,
+        "available": true
+      },
+      {
+        "id": "2419452-f2",
+        "name": "Jacket",
+        "description": "Comfortable campus jacket",
+        "price": 45.0,
+        "category": "Clothing",
+        "popularity": 87,
+        "available": true
+      },
+      {
+        "id": "2419452-f3",
+        "name": "Canvas Tote Bag",
+        "description": "Reusable tote bag",
+        "price": 12.0,
+        "category": "Accessories",
+        "popularity": 84,
+        "available": true
+      },
+      {
+        "id": "2419452-f5",
+        "name": "Keychain",
+        "description": "IIUM logo keychain",
+        "price": 5.0,
+        "category": "Souvenirs",
+        "popularity": 62,
+        "available": true
+      },
+      {
+        "id": "2419452-f6",
+        "name": "Sticker Pack",
+        "description": "Student life sticker collection",
+        "price": 4.0,
+        "category": "Souvenirs",
+        "popularity": 58,
+        "available": true
       }
     ]
   }

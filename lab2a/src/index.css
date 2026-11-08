@@ -44,7 +44,7 @@ body {
 }
 .nav {
   display: flex;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 .nav a {
   color: #fff;
@@ -577,6 +577,10 @@ body {
 .nav .link:hover {
   opacity: 0.8;
 }
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
 
 /* Section headings */
 
@@ -590,7 +594,7 @@ body {
 
 .vendor-grid {
   display: grid;
-  grid-template-columns: repeat(autofit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
   align-items: stretch;
 }
@@ -836,4 +840,33 @@ button.vendor-card.selected {
   border-radius: 16px;
   padding: 2rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+.vendor-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.vendor-link:visited {
+  color: inherit;
+}
+
+.vendor-link:hover {
+  color: inherit;
+}
+
+.nav {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav a.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
